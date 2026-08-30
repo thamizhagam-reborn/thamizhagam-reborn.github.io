@@ -50,7 +50,7 @@ function formatTwoDigits(num: number): string {
 
 // Audio track - Launch Theme MP3
 export const AUDIO_TRACKS = {
-  THEME: "/Reborn-Clock-Sound.mp3",
+  THEME: "/reborn-countdown/Reborn-Clock-Sound.mp3",
 };
 
 // Export audio control functions
