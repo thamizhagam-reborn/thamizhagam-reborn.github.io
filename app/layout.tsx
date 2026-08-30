@@ -27,20 +27,20 @@ export const metadata: Metadata = {
   creator: "Thamizhagam Reborn",
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/thamizhagam-logo.png", sizes: "192x192", type: "image/png" },
+      { url: "/reborn-countdown/favicon.ico" },
+      { url: "/reborn-countdown/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/reborn-countdown/thamizhagam-logo.png", sizes: "192x192", type: "image/png" },
     ],
-    shortcut: ["/favicon.ico"],
+    shortcut: ["/reborn-countdown/favicon.ico"],
     apple: [
-      { url: "/thamizhagam-logo.png", sizes: "180x180", type: "image/png" },
+      { url: "/reborn-countdown/thamizhagam-logo.png", sizes: "180x180", type: "image/png" },
     ],
   },
   openGraph: {
-    title: "Thamizhagam Reborn | Official Launch Countdown",
-    description:
-      "Remembering our greatness, let us build our future ~ Thamizhagam Reborn. Launching September 11, 2026 at 6:30 PM.",
-    images: ["/thamizhagam-logo.png"],
+    title: "TMRP Launch | Thamizhagam Reborn",
+    description: "An immersive cinematic countdown experience for Thamizhagam Reborn, launching September 11, 2026 at 6:30 PM.",
+    url: "https://thamizhagam-reborn.github.io/reborn-countdown",
+    images: ["/reborn-countdown/thamizhagam-logo.png"],
   },
 };
 
