@@ -1,10 +1,12 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://mcu-doomsday-clock.vercel.app",
-      lastModified: "2025-01-13",
+      url: "https://thamizhagam-reborn.github.io/reborn-countdown",
+      lastModified: "2026-08-30",
       changeFrequency: "monthly",
       priority: 1,
     },

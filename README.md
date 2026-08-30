@@ -47,14 +47,6 @@ app/
 
 This project is an independent creation for artistic and technical demonstration purposes. It is not associated, affiliated, authorized, or endorsed by Marvel Entertainment, LLC or The Walt Disney Company.
 
-## Author
-
-**Abhishek Kumar (KMaar)**
-
-- Portfolio: [kmaar.vercel.app](https://kmaar.vercel.app)
-- GitHub: [@SudoKMaar](https://github.com/SudoKMaar)
-- LinkedIn: [AbhishekKMaar](https://www.linkedin.com/in/AbhishekKMaar)
-
 ## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.txt](LICENSE.txt) file for details.
