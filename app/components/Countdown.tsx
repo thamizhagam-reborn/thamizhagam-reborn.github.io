@@ -83,7 +83,7 @@ export default function Countdown() {
   useEffect(() => {
     globalAudio = new Audio(AUDIO_TRACKS.THEME);
     globalAudio.loop = true;
-    globalAudio.volume = 0.4;
+    globalAudio.volume = 1.0;
     globalAudio.preload = "auto";
 
     // Explicit loop fallback ensuring infinite continuous playback
@@ -126,6 +126,9 @@ export default function Countdown() {
     document.addEventListener("touchstart", enableAudio);
     document.addEventListener("keydown", enableAudio);
     document.addEventListener("scroll", enableAudio);
+
+    // Attempt autoplay immediately
+    tryPlayAudio();
 
     const startTimer = setTimeout(() => {
       const initialTime = calculateTimeLeft();
