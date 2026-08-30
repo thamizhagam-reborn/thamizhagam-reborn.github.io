@@ -64,7 +64,7 @@ export default function NotFound() {
       <div className="bg-base absolute inset-0 z-[1] flex items-center justify-center opacity-30 pointer-events-none">
         <div
           className="w-full h-full max-w-[70vmin] max-h-[70vmin] bg-contain bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/reborn-countdown/thamizhagam-logo.png')" }}
+          style={{ backgroundImage: "url('/thamizhagam-logo.png')" }}
         />
       </div>
 

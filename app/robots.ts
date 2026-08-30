@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://thamizhagam-reborn.github.io/reborn-countdown/sitemap.xml",
+    sitemap: "https://thamizhagam-reborn.github.io/sitemap.xml",
   };
 }
