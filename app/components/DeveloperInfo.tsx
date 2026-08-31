@@ -35,32 +35,31 @@ export default function DeveloperInfo() {
 
   return (
     <>
-      {/* Mobile Toggle Button (Visible only on xl:hidden so it doesn't overlap clock) */}
+      {/* Toggle Button (Visible on all screens) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="xl:hidden absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-50 p-3 sm:p-4 rounded-full bg-black/60 border border-amber-500/35 backdrop-blur-md text-amber-400/80 hover:text-amber-200 shadow-[0_0_20px_rgba(245,175,40,0.25)] transition-all duration-300 pointer-events-auto"
+        className="absolute left-4 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-50 p-3 sm:p-4 rounded-full bg-black/60 border border-amber-500/35 backdrop-blur-md text-amber-400/80 hover:text-amber-200 hover:scale-105 shadow-[0_0_20px_rgba(245,175,40,0.25)] transition-all duration-300 pointer-events-auto"
         aria-label="Toggle Developer Info"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-          <circle cx="9" cy="7" r="4"></circle>
-          <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
         </svg>
       </button>
 
       {/* Developer Panel */}
       <div
-        className={`fixed xl:absolute left-0 top-0 xl:top-1/2 xl:-translate-y-1/2 w-full xl:w-auto h-full xl:h-auto xl:left-8 z-40 flex flex-col justify-center pointer-events-none transition-all duration-500 ease-in-out ${
-          isOpen ? "opacity-100 translate-x-0 bg-black/80 xl:bg-transparent backdrop-blur-xl xl:backdrop-blur-none" : "opacity-0 -translate-x-full xl:opacity-100 xl:translate-x-0"
+        className={`fixed lg:absolute left-0 top-0 lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-auto h-full lg:h-auto lg:left-24 z-40 flex flex-col justify-center pointer-events-none transition-all duration-500 ease-in-out ${
+          isOpen ? "opacity-100 translate-x-0 bg-black/80 lg:bg-transparent backdrop-blur-xl lg:backdrop-blur-none" : "opacity-0 -translate-x-full"
         }`}
       >
-        <div className="relative mx-6 xl:mx-0 p-6 xl:p-8 rounded-2xl bg-black/40 backdrop-blur-xl border border-amber-500/20 shadow-[0_10px_40px_rgba(0,0,0,0.5),inset_0_0_20px_rgba(245,175,40,0.05)] max-h-[85vh] overflow-y-auto pointer-events-auto custom-scrollbar">
+        <div className="relative mx-6 lg:mx-0 p-6 lg:p-8 rounded-2xl bg-black/40 backdrop-blur-xl border border-amber-500/20 shadow-[0_10px_40px_rgba(0,0,0,0.5),inset_0_0_20px_rgba(245,175,40,0.05)] max-h-[85vh] overflow-y-auto pointer-events-auto custom-scrollbar">
           
           {/* Close button for mobile */}
           <button 
             onClick={() => setIsOpen(false)}
-            className="xl:hidden absolute top-4 right-4 text-amber-500/50 hover:text-amber-400 transition-colors"
+            className="lg:hidden absolute top-4 right-4 text-amber-500/50 hover:text-amber-400 transition-colors"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
