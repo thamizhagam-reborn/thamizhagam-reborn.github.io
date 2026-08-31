@@ -34,6 +34,9 @@ export default function ParticleCanvas() {
   const animationRef = useRef<number>(0);
 
   useEffect(() => {
+    const BASE_PARTICLE_COUNT = 300;
+    // Set an absolute maximum to prevent browser crashes on massive screens
+    const MAX_PARTICLES = 300;
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -78,6 +81,8 @@ export default function ParticleCanvas() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const scaleFactor = Math.min(window.innerWidth, window.innerHeight) / 1000;
 
+      ctx.globalCompositeOperation = "screen";
+
       particlesRef.current.forEach((p) => {
         p.angle += 0.008;
         p.x += p.baseVx * scaleFactor + Math.sin(p.angle) * (0.2 * scaleFactor);
@@ -98,13 +103,19 @@ export default function ParticleCanvas() {
           if (p.alpha >= 0.8) p.fadingOut = true;
         }
 
+        const size = p.baseSize * scaleFactor;
+
+        // Glow pass
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.baseSize * scaleFactor, 0, Math.PI * 2);
-        ctx.fillStyle = `hsla(${p.hue}, 95%, 65%, ${p.alpha})`;
-        ctx.shadowBlur = 8 * scaleFactor;
-        ctx.shadowColor = `hsla(${p.hue}, 100%, 50%, ${p.alpha})`;
+        ctx.arc(p.x, p.y, size * 2, 0, Math.PI * 2);
+        ctx.fillStyle = `hsla(${p.hue}, 95%, 65%, ${p.alpha * 0.2})`;
         ctx.fill();
-        ctx.shadowBlur = 0;
+
+        // Core pass
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+        ctx.fillStyle = `hsla(${p.hue}, 95%, 65%, ${p.alpha})`;
+        ctx.fill();
       });
 
       animationRef.current = requestAnimationFrame(animate);

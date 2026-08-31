@@ -130,11 +130,11 @@ export default function UtilityBar() {
       {showParticlePopup && (
         <div className="absolute bottom-0 right-16 bg-black/85 backdrop-blur-md rounded-xl p-4 shadow-2xl border border-amber-500/30 min-w-[210px]">
           <div className="text-amber-200 text-sm font-medium mb-1">Golden Embers</div>
-          <div className="text-amber-400/60 text-xs mb-3">Density: 10 - 1000 (Max)</div>
+          <div className="text-amber-400/60 text-xs mb-3">Density: 10 - 300 (Max)</div>
           <input
             type="number"
             min="10"
-            max="1000"
+            max="300"
             value={particleInput}
             onChange={(e) => setParticleInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleParticleSubmit()}
@@ -176,7 +176,7 @@ export default function UtilityBar() {
         />
         <UtilityButton
           icon={<ParticleIcon />}
-          label="Embers Settings (Max 1000)"
+          label="Embers Settings (Max 300)"
           onClick={() => {
             setParticleInput(getParticleCount().toString());
             setShowParticlePopup(!showParticlePopup);

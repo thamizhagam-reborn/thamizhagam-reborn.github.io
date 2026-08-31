@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, Suspense } from "react";
 import ParticleCanvas from "./ParticleCanvas";
 import Countdown from "./Countdown";
 import WillReturn from "./WillReturn";
+import DeveloperInfo from "./DeveloperInfo";
 
 function lerp(start: number, end: number, factor: number): number {
   return start + (end - start) * factor;
@@ -137,6 +138,9 @@ export default function DoomsdayClock() {
           </Suspense>
         </div>
       </div>
+
+      {/* 4. Developer Info Panel (Left Side) */}
+      <DeveloperInfo />
     </div>
   );
 }

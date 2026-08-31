@@ -201,22 +201,28 @@ export default function Countdown() {
 
   return (
     <div className="countdown-container relative z-20 pointer-events-none whitespace-nowrap flex flex-col justify-center items-center opacity-0">
-      {/* Static date */}
+      {/* Scrambling Text (Replaces Date) */}
       <div
-        className="font-[var(--font-cinzel)] text-[3.4vmin] sm:text-[2.8vmin] font-bold tracking-[0.4vmin] text-amber-200 uppercase transition-opacity duration-700 text-center"
+        className="font-[var(--font-cinzel)] text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-[0.5em] text-amber-200 uppercase transition-all duration-1000 text-center animate-pulse"
         style={{
           textShadow: "0 0 20px rgba(245, 180, 50, 0.8), 0 0 40px rgba(218, 165, 32, 0.4)",
           opacity: showDate ? 1 : 0,
           position: showDate ? "relative" : "absolute",
+          filter: showDate ? "blur(0px)" : "blur(10px)",
+          transform: showDate ? "scale(1)" : "scale(1.1)",
         }}
       >
-        SEPTEMBER 11, 2026 • 6:30 PM
+        INITIALIZING REBORN...
       </div>
 
-      {/* Countdown wrapper */}
+      {/* Countdown wrapper - Now a flex container for individual cards */}
       <div
-        className="flex items-center gap-[1.5vmin] sm:gap-[2vmin] px-6 py-2.5 sm:px-8 sm:py-3 rounded-2xl bg-black/60 backdrop-blur-md border border-amber-500/30 shadow-[0_0_35px_rgba(230,160,30,0.25)] transition-opacity duration-700"
-        style={{ opacity: showDate ? 0 : 1 }}
+        className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-2 sm:gap-3 md:gap-5 lg:gap-6 2xl:gap-8 w-full max-w-full px-2 sm:px-4 transition-all duration-1000"
+        style={{ 
+          opacity: showDate ? 0 : 1,
+          filter: showDate ? "blur(10px)" : "blur(0px)",
+          transform: showDate ? "scale(0.95)" : "scale(1)",
+        }}
       >
         <TimeBox value={displayValues.months} label="MONTHS" />
         <Separator />
@@ -234,34 +240,31 @@ export default function Countdown() {
 
 function TimeBox({ value, label }: { value: string; label: string }) {
   return (
-    <div className="flex flex-col items-center min-w-[6.2vmin] sm:min-w-[7.2vmin]">
+    <div className="flex flex-col items-center justify-center flex-1 sm:flex-none min-w-[4rem] sm:min-w-[4.5rem] md:min-w-[7rem] lg:min-w-[9rem] 2xl:min-w-[12rem] py-3 sm:py-4 md:py-6 lg:py-8 bg-black/40 backdrop-blur-xl border border-amber-500/30 rounded-xl md:rounded-2xl shadow-[inset_0_0_20px_rgba(245,175,40,0.1),0_5px_15px_rgba(0,0,0,0.5)] transition-transform duration-300 hover:scale-[1.02]">
+      {/* Metallic Gradient Text */}
       <span
-        className="font-mono text-[4.2vmin] sm:text-[3.6vmin] font-bold text-amber-100 tracking-[0.2vmin] leading-none"
+        className="font-mono text-3xl sm:text-4xl md:text-6xl lg:text-7xl 2xl:text-8xl font-extrabold tracking-wider leading-none bg-clip-text text-transparent bg-gradient-to-b from-amber-100 via-amber-300 to-amber-600"
         style={{
-          textShadow:
-            "0 0 18px rgba(255, 200, 50, 0.7), 0 2px 10px rgba(0, 0, 0, 0.9)",
+          filter: "drop-shadow(0 0 15px rgba(245, 175, 40, 0.6))",
         }}
       >
         {value}
       </span>
-      <span
-        className="text-[1.1vmin] sm:text-[0.95vmin] font-bold uppercase text-amber-400/80 mt-[0.8vmin] tracking-[0.25vmin]"
-        style={{ textShadow: "0 1px 4px rgba(0, 0, 0, 0.9)" }}
-      >
-        {label}
-      </span>
+      {/* Sleek Pill Badge for Label */}
+      <div className="mt-2 sm:mt-3 md:mt-4 px-2 sm:px-3 py-1 bg-black/50 border border-amber-500/20 rounded-full shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] overflow-hidden text-center max-w-[90%]">
+        <span
+          className="block text-[0.5rem] sm:text-[0.65rem] md:text-xs lg:text-sm 2xl:text-base font-bold uppercase text-amber-400/90 tracking-[0.1em] md:tracking-[0.25em] truncate"
+        >
+          {label}
+        </span>
+      </div>
     </div>
   );
 }
 
 function Separator() {
   return (
-    <span
-      className="font-mono text-[3.6vmin] sm:text-[3vmin] text-amber-400 font-bold -mt-[1vmin] opacity-80"
-      style={{
-        textShadow: "0 0 12px rgba(245, 180, 50, 0.7)",
-      }}
-    >
+    <span className="font-mono text-2xl sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl text-amber-500/60 font-bold -translate-y-3 sm:-translate-y-4 md:-translate-y-6">
       :
     </span>
   );
