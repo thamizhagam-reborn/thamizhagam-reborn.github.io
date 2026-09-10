@@ -10,7 +10,7 @@ function lerp(start: number, end: number, factor: number): number {
   return start + (end - start) * factor;
 }
 
-export default function DoomsdayClock() {
+export default function DoomsdayClock({ onLaunch }: { onLaunch?: () => void }) {
   const sceneRef = useRef<HTMLDivElement>(null);
   const [isActive, setIsActive] = useState(false);
   const mousePos = useRef({ x: 0, y: 0 });
@@ -120,7 +120,7 @@ export default function DoomsdayClock() {
           />
           {/* Base Logo Image */}
           <img
-            src="/thamizhagam-logo.png"
+            src="/reborn-countdown/thamizhagam-logo.png"
             alt="Thamizhagam Reborn"
             className="bg-base w-[62vmin] h-auto max-h-[57vh] max-w-[90vw] object-contain drop-shadow-[0_0_55px_rgba(245,175,40,0.4)] group-hover:drop-shadow-[0_0_70px_rgba(255,215,50,0.6)] group-hover:scale-[1.02] transition-all duration-300 pointer-events-none"
           />
@@ -128,7 +128,7 @@ export default function DoomsdayClock() {
 
         {/* 2. Countdown directly below logo */}
         <div>
-          <Countdown />
+          <Countdown onLaunch={onLaunch} />
         </div>
 
         {/* 3. Verse directly below countdown */}

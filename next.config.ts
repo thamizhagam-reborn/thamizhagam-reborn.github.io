@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   },
   basePath: '/reborn-countdown',
   assetPrefix: '/reborn-countdown/',
+  devIndicators: false,
 };
 
 export default nextConfig;

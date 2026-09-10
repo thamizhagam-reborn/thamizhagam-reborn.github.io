@@ -17,7 +17,6 @@ const developers = [
       { name: "RICHARD", role: "ADMINISTRATOR, MANAGEMENT" },
       { name: "PIRATE", role: "ADMINISTRATOR, MANAGEMENT" },
       { name: "TT", role: "ADMINISTRATOR, MANAGEMENT, DEVELOPER" },
-      { name: "STR", role: "ADMINISTRATOR" },
     ]
   },
   {
@@ -38,7 +37,7 @@ export default function DeveloperInfo() {
       {/* Toggle Button (Visible on all screens) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="absolute left-4 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-50 p-3 sm:p-4 rounded-full bg-black/60 border border-amber-500/35 backdrop-blur-md text-amber-400/80 hover:text-amber-200 hover:scale-105 shadow-[0_0_20px_rgba(245,175,40,0.25)] transition-all duration-300 pointer-events-auto"
+        className="fixed left-4 sm:left-6 lg:left-8 bottom-4 sm:bottom-6 lg:bottom-8 z-50 p-3 sm:p-4 rounded-full bg-black/60 border border-amber-500/35 backdrop-blur-md text-amber-400/80 hover:text-amber-200 hover:scale-105 shadow-[0_0_20px_rgba(245,175,40,0.25)] transition-all duration-300 pointer-events-auto"
         aria-label="Toggle Developer Info"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -50,11 +49,11 @@ export default function DeveloperInfo() {
 
       {/* Developer Panel */}
       <div
-        className={`fixed lg:absolute left-0 top-0 lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-auto h-full lg:h-auto lg:left-24 z-40 flex flex-col justify-center pointer-events-none transition-all duration-500 ease-in-out ${
-          isOpen ? "opacity-100 translate-x-0 bg-black/80 lg:bg-transparent backdrop-blur-xl lg:backdrop-blur-none" : "opacity-0 -translate-x-full"
+        className={`fixed left-4 bottom-20 sm:left-6 sm:bottom-24 lg:left-24 lg:bottom-8 z-40 flex flex-col justify-end pointer-events-none transition-all duration-500 ease-in-out ${
+          isOpen ? "opacity-100 translate-y-0 translate-x-0" : "opacity-0 translate-y-8 -translate-x-8"
         }`}
       >
-        <div className="relative mx-6 lg:mx-0 p-6 lg:p-8 rounded-2xl bg-black/40 backdrop-blur-xl border border-amber-500/20 shadow-[0_10px_40px_rgba(0,0,0,0.5),inset_0_0_20px_rgba(245,175,40,0.05)] max-h-[85vh] overflow-y-auto pointer-events-auto custom-scrollbar">
+        <div className="relative p-6 sm:p-8 rounded-2xl bg-black/70 backdrop-blur-xl border border-amber-500/20 shadow-[0_10px_40px_rgba(0,0,0,0.5),inset_0_0_20px_rgba(245,175,40,0.05)] max-h-[75vh] w-[calc(100vw-2rem)] sm:w-[400px] overflow-y-auto pointer-events-auto custom-scrollbar">
           
           {/* Close button for mobile */}
           <button 

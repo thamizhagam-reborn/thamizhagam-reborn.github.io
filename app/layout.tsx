@@ -27,22 +27,22 @@ export const metadata: Metadata = {
   creator: "Thamizhagam Reborn",
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/thamizhagam-logo.png", sizes: "192x192", type: "image/png" },
-    ],
-    shortcut: ["/favicon.ico"],
-    apple: [
-      { url: "/thamizhagam-logo.png", sizes: "180x180", type: "image/png" },
+      { url: "/reborn-countdown/thamizhagam-logo.png", sizes: "192x192", type: "image/png" },
+      { url: "/reborn-countdown/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/reborn-countdown/favicon-32.png", sizes: "16x16", type: "image/png" },
+      { url: "/reborn-countdown/favicon.ico", rel: "shortcut icon" },
+      { url: "/reborn-countdown/thamizhagam-logo.png", sizes: "180x180", type: "image/png" },
     ],
   },
   openGraph: {
     title: "TMRP Launch | Thamizhagam Reborn",
-    description: "An immersive cinematic countdown experience for Thamizhagam Reborn, launching September 11, 2026 at 6:30 PM.",
+    description: "An immersive cinematic countdown experience for Thamizhagam Reborn",
     url: "https://thamizhagam-reborn.github.io",
-    images: ["/thamizhagam-logo.png"],
+    images: ["/reborn-countdown/thamizhagam-logo.png"],
   },
 };
+
+import Navigation from "./components/Navigation";
 
 export default function RootLayout({
   children,
@@ -51,7 +51,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cinzel.variable}>
+      <body className={`${cinzel.variable} bg-black text-white antialiased`}>
+        <Navigation />
         {children}
       </body>
     </html>

@@ -10,7 +10,7 @@ interface TimeLeft {
   seconds: number;
 }
 
-// Target: September 11, 2026 at 6:30 PM (18:30:00)
+// Target: Final Launch at 18:30 IST (September 11, 2026 18:30:00)
 const TARGET_DATE = new Date("September 11, 2026 18:30:00");
 
 function calculateTimeLeft(): TimeLeft | null {
@@ -50,7 +50,7 @@ function formatTwoDigits(num: number): string {
 
 // Audio track - Launch Theme MP3
 export const AUDIO_TRACKS = {
-  THEME: "/Reborn-Clock-Sound.mp3",
+  THEME: "/reborn-countdown/Reborn-Clock-Sound.mp3",
 };
 
 // Export audio control functions
@@ -69,7 +69,7 @@ export function toggleAudio() {
   return globalAudio.muted;
 }
 
-export default function Countdown() {
+export default function Countdown({ onLaunch }: { onLaunch?: () => void }) {
   const [showDate, setShowDate] = useState(true);
   const [time, setTime] = useState<TimeLeft | null>(null);
   const [displayValues, setDisplayValues] = useState({
@@ -132,7 +132,10 @@ export default function Countdown() {
 
     const startTimer = setTimeout(() => {
       const initialTime = calculateTimeLeft();
-      if (!initialTime) return;
+      if (!initialTime) {
+        if (onLaunch) onLaunch();
+        return;
+      }
 
       setShowDate(false);
       setTime(initialTime);
@@ -193,6 +196,9 @@ export default function Countdown() {
           minutes: formatTwoDigits(newTime.minutes),
           seconds: formatTwoDigits(newTime.seconds),
         });
+      } else {
+        clearInterval(interval);
+        if (onLaunch) onLaunch();
       }
     }, 1000);
 
