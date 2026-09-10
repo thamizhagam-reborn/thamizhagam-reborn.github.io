@@ -40,7 +40,7 @@ export default function OfficialWebsite() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("home")}>
-            <img src="/reborn-countdown/icon.png" alt="TMRP Logo" className="w-10 h-10 object-contain drop-shadow-[0_0_10px_rgba(245,175,40,0.5)]" />
+            <img src="/icon.png" alt="TMRP Logo" className="w-10 h-10 object-contain drop-shadow-[0_0_10px_rgba(245,175,40,0.5)]" />
             <span className="font-[var(--font-cinzel)] font-bold text-xl tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600 hidden sm:block">
               THAMIZHAGAM
             </span>
@@ -66,7 +66,7 @@ export default function OfficialWebsite() {
           <div className="relative group mb-8">
             <div className="absolute inset-0 bg-amber-500/20 blur-[50px] rounded-full group-hover:bg-amber-500/30 transition-all duration-500"></div>
             <img 
-              src="/reborn-countdown/thamizhagam-logo.png" 
+              src="/thamizhagam-logo.png" 
               alt="Thamizhagam Reborn" 
               className="relative w-full max-w-[400px] sm:max-w-[600px] drop-shadow-[0_0_30px_rgba(245,175,40,0.5)] animate-pulse-slow"
             />
@@ -166,7 +166,7 @@ export default function OfficialWebsite() {
       {/* Footer */}
       <footer className="relative z-20 border-t border-amber-500/20 bg-black/80 py-8">
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center">
-          <img src="/reborn-countdown/icon.png" alt="TMRP Logo" className="w-12 h-12 opacity-50 mb-4 grayscale" />
+          <img src="/icon.png" alt="TMRP Logo" className="w-12 h-12 opacity-50 mb-4 grayscale" />
           <p className="text-white/40 text-sm font-sans text-center">
             &copy; {new Date().getFullYear()} Thamizhagam Reborn. All Rights Reserved.<br />
             Not affiliated with Rockstar Games, Take-Two Interactive, or Grand Theft Auto.

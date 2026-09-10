@@ -120,7 +120,7 @@ export default function DoomsdayClock({ onLaunch }: { onLaunch?: () => void }) {
           />
           {/* Base Logo Image */}
           <img
-            src="/reborn-countdown/thamizhagam-logo.png"
+            src="/thamizhagam-logo.png"
             alt="Thamizhagam Reborn"
             className="bg-base w-[62vmin] h-auto max-h-[57vh] max-w-[90vw] object-contain drop-shadow-[0_0_55px_rgba(245,175,40,0.4)] group-hover:drop-shadow-[0_0_70px_rgba(255,215,50,0.6)] group-hover:scale-[1.02] transition-all duration-300 pointer-events-none"
           />

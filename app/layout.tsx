@@ -27,18 +27,18 @@ export const metadata: Metadata = {
   creator: "Thamizhagam Reborn",
   icons: {
     icon: [
-      { url: "/reborn-countdown/thamizhagam-logo.png", sizes: "192x192", type: "image/png" },
-      { url: "/reborn-countdown/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/reborn-countdown/favicon-32.png", sizes: "16x16", type: "image/png" },
-      { url: "/reborn-countdown/favicon.ico", rel: "shortcut icon" },
-      { url: "/reborn-countdown/thamizhagam-logo.png", sizes: "180x180", type: "image/png" },
+      { url: "/thamizhagam-logo.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.ico", rel: "shortcut icon" },
+      { url: "/thamizhagam-logo.png", sizes: "180x180", type: "image/png" },
     ],
   },
   openGraph: {
     title: "TMRP Launch | Thamizhagam Reborn",
     description: "An immersive cinematic countdown experience for Thamizhagam Reborn",
     url: "https://thamizhagam-reborn.github.io",
-    images: ["/reborn-countdown/thamizhagam-logo.png"],
+    images: ["/thamizhagam-logo.png"],
   },
 };
 

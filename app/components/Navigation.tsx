@@ -39,7 +39,7 @@ export default function Navigation() {
         {/* Logo */}
         <Link href="/home" className="flex items-center gap-3 group">
           <img
-            src="/reborn-countdown/thamizhagam-logo.png"
+            src="/thamizhagam-logo.png"
             alt="TMRP Logo"
             className="w-10 h-10 object-contain drop-shadow-[0_0_10px_rgba(245,175,40,0.5)] transition-transform duration-300 group-hover:scale-110"
           />

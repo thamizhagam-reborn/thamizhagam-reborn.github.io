@@ -27,7 +27,7 @@ export default function Gallery() {
               className="group relative break-inside-avoid overflow-hidden rounded-2xl border border-white/5 bg-white/5 hover:border-amber-500/30 transition-colors duration-500 cursor-pointer"
             >
               <img 
-                src={`/reborn-countdown/Memories/${img}`} 
+                src={`/Memories/${img}`} 
                 alt={`Memory ${i + 1}`} 
                 className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110 group-hover:brightness-110"
                 loading="lazy"

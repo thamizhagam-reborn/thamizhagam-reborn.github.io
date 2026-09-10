@@ -12,7 +12,7 @@ export default function Home() {
 
       <div className="relative z-20 w-full max-w-5xl mx-auto flex flex-col items-center text-center gap-8 py-20 animate-in fade-in duration-1000 slide-in-from-bottom-10">
         <div className="relative">
-          <img src="/reborn-countdown/thamizhagam-logo.png" alt="TMRP Logo" className="w-32 h-32 md:w-48 md:h-48 object-contain drop-shadow-[0_0_30px_rgba(245,175,40,0.6)] animate-pulse" />
+          <img src="/thamizhagam-logo.png" alt="TMRP Logo" className="w-32 h-32 md:w-48 md:h-48 object-contain drop-shadow-[0_0_30px_rgba(245,175,40,0.6)] animate-pulse" />
         </div>
         
         <h1 className="text-4xl sm:text-6xl md:text-8xl font-[var(--font-cinzel)] font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 drop-shadow-[0_0_15px_rgba(245,175,40,0.3)]">

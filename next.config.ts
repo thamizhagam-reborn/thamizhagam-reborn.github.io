@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/reborn-countdown',
-  assetPrefix: '/reborn-countdown/',
+  basePath: '',
+  assetPrefix: '/',
   devIndicators: false,
 };
 

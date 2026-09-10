@@ -5,7 +5,7 @@ export default function Departments() {
       title: "THAMIZHAGAM POLICE",
       subtitle: "TMPD",
       desc: "To Serve and Protect. Join the elite force keeping the streets of Thamizhagam safe.",
-      icon: "/reborn-countdown/pd.png",
+      icon: "/pd.png",
       color: "blue",
       applyUrl: "https://discord.gg/Fg9ndHCtkM"
     },
@@ -14,7 +14,7 @@ export default function Departments() {
       title: "MEDICAL DEPARTMENT",
       subtitle: "EMS / Hospital",
       desc: "Dedicated to saving lives. The backbone of the city's health and wellness.",
-      icon: "/reborn-countdown/ems.png",
+      icon: "/ems.png",
       color: "red",
       applyUrl: "https://discord.gg/Fg9ndHCtkM"
     },
